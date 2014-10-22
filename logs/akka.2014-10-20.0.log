@@ -1,0 +1,35 @@
+17:19:52.980 [SupervisionActorSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+17:19:53.003 [SupervisionActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+17:19:53.011 [SupervisionActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+17:19:53.021 [SupervisionActorSystem-akka.actor.default-dispatcher-2] INFO  m.r.akkanotes.lifecycle.TeacherActor - QuoteRequest received. Sending response to Student
+17:19:53.024 [SupervisionActorSystem-akka.actor.default-dispatcher-4] INFO  akka.actor.DeadLetterActorRef - Message [me.rerun.akkanotes.protocols.TeacherProtocol$QuoteResponse] from Actor[akka://SupervisionActorSystem/user/$a/$a#1071576125] to Actor[akka://SupervisionActorSystem/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+22:29:49.990 [SupervisionActorSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:29:50.007 [SupervisionActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+22:29:50.013 [SupervisionActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+22:29:50.015 [SupervisionActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.supervision.TeacherSupervisor - Teacher Actor path : akka://SupervisionActorSystem/user/teacherSupervisor/teacherActor
+22:29:50.017 [SupervisionActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.supervision.TeacherActor - QuoteRequest received. Sending response to Student
+22:29:50.020 [SupervisionActorSystem-akka.actor.default-dispatcher-2] INFO  akka.actor.DeadLetterActorRef - Message [me.rerun.akkanotes.protocols.TeacherProtocol$QuoteResponse] from Actor[akka://SupervisionActorSystem/user/teacherSupervisor/teacherActor#1812122198] to Actor[akka://SupervisionActorSystem/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+22:32:24.555 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:32:24.574 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+22:32:24.580 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+22:34:17.440 [LifecycleActorSystem-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:34:17.455 [LifecycleActorSystem-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+22:34:17.460 [LifecycleActorSystem-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - Default Loggers started
+22:34:17.462 [LifecycleActorSystem-akka.actor.default-dispatcher-2] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside BasicLifecycleLoggingActor Constructor
+22:34:17.463 [LifecycleActorSystem-akka.actor.default-dispatcher-2] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside the preStart method of BasicLifecycleLoggingActor
+22:34:19.473 [LifecycleActorSystem-akka.actor.default-dispatcher-3] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside postStop method of BasicLifecycleLoggingActor
+22:34:19.478 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+22:34:29.368 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:34:29.381 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+22:34:29.386 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+22:34:29.387 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside BasicLifecycleLoggingActor Constructor
+22:34:29.388 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside the preStart method of BasicLifecycleLoggingActor
+22:34:31.393 [LifecycleActorSystem-akka.actor.default-dispatcher-3] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside postStop method of BasicLifecycleLoggingActor
+22:34:31.397 [LifecycleActorSystem-akka.actor.default-dispatcher-2] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
+22:34:56.683 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:34:56.694 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - logger log1-Slf4jLogger started
+22:34:56.697 [LifecycleActorSystem-akka.actor.default-dispatcher-4] DEBUG akka.event.EventStream - Default Loggers started
+22:34:56.699 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside BasicLifecycleLoggingActor Constructor
+22:34:56.699 [LifecycleActorSystem-akka.actor.default-dispatcher-4] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside the preStart method of BasicLifecycleLoggingActor
+22:34:58.709 [LifecycleActorSystem-akka.actor.default-dispatcher-2] INFO  m.r.a.l.BasicLifecycleLoggingActor - Inside postStop method of BasicLifecycleLoggingActor
+22:34:58.714 [LifecycleActorSystem-akka.actor.default-dispatcher-5] DEBUG akka.event.EventStream - shutting down: StandardOutLogger started
