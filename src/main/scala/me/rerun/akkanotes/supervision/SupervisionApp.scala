@@ -2,7 +2,6 @@ package me.rerun.akkanotes.supervision
 
 import akka.actor.{ActorSystem, Props}
 import me.rerun.akkanotes.protocols.TeacherProtocol.QuoteRequest
-import me.rerun.akkanotes.supervision.TeacherActor
 
 /**
  * @author Arun
@@ -10,8 +9,8 @@ import me.rerun.akkanotes.supervision.TeacherActor
 object SupervisionApp extends App{
 
   val actorSystem=ActorSystem("SupervisionActorSystem")
-  val teacherProps=Props[TeacherActor]
-  val teacherSupervisor=actorSystem.actorOf(Props(new TeacherSupervisor(teacherProps)),"teacherSupervisor")
+  val teacherProps=Props[TeacherActorAllForOne]
+  val teacherSupervisor=actorSystem.actorOf(Props(new DepartmentSupervisor(teacherProps)),"teacherSupervisor")
 
   println ("Teacher Supervisor path : "+ teacherSupervisor.path)
   teacherSupervisor!QuoteRequest

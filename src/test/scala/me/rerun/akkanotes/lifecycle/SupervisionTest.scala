@@ -1,11 +1,12 @@
 package me.rerun.akkanotes.lifecycle
 
-import akka.actor.{ActorSystem, Props}
+import akka.actor.{Props, ActorSystem}
 import akka.testkit.{ImplicitSender, TestKit}
 import com.typesafe.config.ConfigFactory
 import org.scalatest.{BeforeAndAfterAll, MustMatchers, WordSpecLike}
+import me.rerun.akkanotes.supervision.TeacherActorAllForOne
 
-class DeathWatchTest extends TestKit(ActorSystem("TestUniversityMessageSystem", ConfigFactory.parseString("""
+class SupervisionTest extends TestKit(ActorSystem("TestUniversityMessageSystem", ConfigFactory.parseString("""
                                             akka{
                                               loggers = ["akka.testkit.TestEventListener"]
                                               test{
@@ -18,9 +19,9 @@ class DeathWatchTest extends TestKit(ActorSystem("TestUniversityMessageSystem", 
   with BeforeAndAfterAll
   with ImplicitSender {
 
-  "A basic lifecycle teacher" must {
+  "A  teacher" must {
     "print logs from constructor, preStart methods  when an actorOf is being called" in {
-      system.actorOf(Props[BasicLifecycleLoggingActor], "teacherActor")
+      system.actorOf(Props[TeacherActorAllForOne], "teacherActor")
     }
 
   }

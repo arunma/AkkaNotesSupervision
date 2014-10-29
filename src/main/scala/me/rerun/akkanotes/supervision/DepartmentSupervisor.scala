@@ -6,7 +6,7 @@ import me.rerun.akkanotes.protocols.TeacherProtocol.QuoteRequest
 /**
  * @author Arun Manivannan
  */
-class TeacherSupervisor (teacherProps:Props) extends Actor with ActorLogging {
+class DepartmentSupervisor (teacherProps:Props) extends Actor with ActorLogging {
 
   val teacherActor=context.actorOf(teacherProps, "teacherActor")
   log.info ("Teacher Actor path : "+ teacherActor.path)
