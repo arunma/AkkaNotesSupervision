@@ -2,6 +2,7 @@ import akka.actor.{ActorSystem, Props}
 import me.rerun.akkanotes.lifecycle.BasicLifecycleLoggingActor
 import me.rerun.akkanotes.protocols.TeacherProtocol.QuoteRequest
 
+object Supervision{
 
   val actorSystem=ActorSystem("SupervisionActorSystem")
   val actorRef=actorSystem.actorOf(Props[BasicLifecycleLoggingActor], "basicLifecycleActor")
@@ -10,3 +11,4 @@ import me.rerun.akkanotes.protocols.TeacherProtocol.QuoteRequest
   val actorRefFromPath=actorSystem.actorSelection("akka://SupervisionActorSystem/user/basicLifecycleActor")
   actorRefFromPath!QuoteRequest
   
+}

@@ -4,7 +4,7 @@
 		module="akkanotesactorsupervision$sources_javadoc_2.11"
 		revision="2.3.5"
 		status="integration"
-		publication="20141022015741"
+		publication="20141031175550"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

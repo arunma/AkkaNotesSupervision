@@ -5,6 +5,8 @@ import akka.actor.ActorSystem
 import akka.actor.DeadLetter
 import akka.actor.Props
 import akka.actor.actorRef2Scala
+import akka.actor.Kill
+import akka.actor.PoisonPill
 
 object LifecycleApp extends App {
 
@@ -15,7 +17,13 @@ object LifecycleApp extends App {
   actorSystem.eventStream.subscribe(deadLetterListener, classOf[DeadLetter])
 
   lifecycleActor ! "hello"
+  lifecycleActor ! "hello"
+  //lifecycleActor ! "stop"
+  lifecycleActor!Kill
+  lifecycleActor ! "hello"
+  lifecycleActor ! "hello"
   lifecycleActor ! "stop"
+  //lifecycleActor ! Kill
   lifecycleActor ! "hello"
 
 }

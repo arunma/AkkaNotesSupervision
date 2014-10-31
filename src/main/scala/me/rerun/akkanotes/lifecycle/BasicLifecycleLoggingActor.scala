@@ -14,7 +14,10 @@ class BasicLifecycleLoggingActor extends Actor with ActorLogging{
   }
 
   def receive = LoggingReceive{
-    case "hello" => log.info ("hello")
+    case "hello" => {
+      Thread.sleep(3000)
+      log.info ("hello")
+    }
     case "stop" => context.stop(self)
   }
 

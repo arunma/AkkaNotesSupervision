@@ -100,7 +100,7 @@ class DeathWatchTest extends TestKit(ActorSystem("TestUniversityMessageSystem", 
       within (1000 millis) {
         (1 to 3).foreach (_=>teacherActor!QuoteRequest) //this sends a message to the QuoteRepositoryActor
 
-        EventFilter.error (start="Child Actor", occurrences = 1).intercept{
+        EventFilter.error (pattern="""Child Actor .* Terminated""", occurrences = 1).intercept{
           teacherActor!QuoteRequest //Send the dangerous 4th message
         }
       }

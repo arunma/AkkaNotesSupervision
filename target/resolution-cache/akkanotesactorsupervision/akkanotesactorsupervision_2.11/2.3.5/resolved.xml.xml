@@ -4,7 +4,7 @@
 		module="akkanotesactorsupervision_2.11"
 		revision="2.3.5"
 		status="integration"
-		publication="20141022205412"
+		publication="20141031180232"
 	>
 		<description>
 		AkkaNotesActorSupervision
@@ -27,7 +27,9 @@
 	</configurations>
 	<publications>
 		<artifact name="akkanotesactorsupervision_2.11" type="pom" ext="pom" conf="pom"/>
-		<artifact name="akkanotesactorsupervision_2.11" type="jar" ext="jar" conf="optional" e:classifier="download"/>
+		<artifact name="akkanotesactorsupervision_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="akkanotesactorsupervision_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="akkanotesactorsupervision_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.2" conf="scala-tool->default,optional(default)"/>

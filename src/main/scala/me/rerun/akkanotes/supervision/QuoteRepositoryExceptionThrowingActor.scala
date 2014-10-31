@@ -5,8 +5,9 @@ import me.rerun.akkanotes.protocols.TeacherProtocol.{QuoteRequest, QuoteResponse
 import scala.io.Source
 import me.rerun.akkanotes.protocols.QuoteRepositoryProtocol._
 import scala.util.Random
+import me.rerun.akkanotes.exception.RepoDownException
 
-class QuoteRepositoryActor() extends Actor with ActorLogging {
+class QuoteRepositoryExceptionThrowingActor() extends Actor with ActorLogging {
 
   val quotes = List(
     "Moderation is for cowards",
@@ -21,18 +22,15 @@ class QuoteRepositoryActor() extends Actor with ActorLogging {
     case QuoteRepositoryRequest => {
 
       if (repoRequestCount<3){
-        self!PoisonPill
+        throw new RepoDownException("I am going down down down")
       }
       else {
         //Get a random Quote from the list and construct a response
         val quoteResponse = QuoteRepositoryResponse(quotes(Random.nextInt(quotes.size)))
 
-        log.info("QuoteRequest received in QuoteRepositoryActor. Sending response to Teacher Actor")
+        log.info("QuoteRequest received in QuoteRepositoryActor. Sending response to Sender")
         sender ! quoteResponse
       }
-
     }
-
   }
-
 }
